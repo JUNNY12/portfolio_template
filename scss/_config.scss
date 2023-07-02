@@ -1,0 +1,42 @@
+$primary-color: #292828;
+$secondary-color: #FF658C;
+$white-color: #fff;
+$dark-color: #000;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color) {
+    @if(lightness($color) > 40%) {
+        @return $dark-color;
+    }
+
+    @else {
+        @return $white-color;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}

@@ -1,0 +1,120 @@
+@include media-md {
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .nav {
+        visibility: visible;
+
+        .menu-nav {
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+            background-color: transparent;
+            text-align: right;
+
+            &__item {
+                display: inline;
+                padding-right: 1.5rem;
+            }
+
+            &__link {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .home {
+        &__name {
+            font-size: 5rem;
+        }
+    }
+
+    .about {
+        &__bio {
+            font-size: 1.3rem;
+        }
+    }
+
+    .jobs {
+        width: 60vw;
+
+        &__job {
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.7rem;
+            }
+
+            h6 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .projects {
+        &__bio-image {
+            height: 60vh;
+        }
+
+        &__items {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .secondary-text {
+            font-size: 3rem;
+        }
+    }
+
+    .contact {
+        h2 {
+            font-size: 3rem;
+        }
+
+        &__list {
+            font-size: 1.5rem;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    footer#about {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1rem;
+        position: relative;
+        text-align: right;
+        padding: 1rem;
+        color: set-text-color($primary-color);
+        font-weight: 700;
+        cursor: pointer;
+
+        .footer {
+            width: 200px;
+            padding: 1rem;
+            background: $secondary-color;
+            border-radius: 2px;
+        }
+
+    }
+}
+
+@include media-lg{
+    
+    .projects {
+        &__items {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .contact {
+        &__list {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}

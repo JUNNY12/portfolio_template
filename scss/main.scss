@@ -1,0 +1,77 @@
+@import 'config';
+@import 'home';
+@import 'menu';
+@import 'about';
+@import 'projects';
+@import 'contact';
+@import 'responsive';
+
+
+body {
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
+a {
+    color: set-text-color($primary-color);
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+}
+
+.secondary-text {
+    color: $secondary-color;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+
+    .social-icons {
+        position: fixed;
+        bottom: 1.4rem;
+        border-radius: 2px;
+        left: 0rem;
+        padding: 0.5rem;
+
+        a {
+            padding: 0.4rem;
+
+            .fa-2x{
+                font-size: 1.2rem;
+            }
+
+            &:hover {
+                color: $secondary-color;
+                @include transition-ease;
+            }
+        }
+    }
+}
+
+footer {
+    font-size: 1rem;
+    position: fixed;
+    border-radius: 2px;
+    bottom: 1rem;
+    right:0.5rem;
+    text-align: right;
+    padding: 1rem;
+    color: set-text-color($primary-color);
+    font-weight: 700;
+}
+
